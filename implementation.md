@@ -30,6 +30,18 @@ Outputs: batch_state.json, batch_results.csv, batch_report.txt
 - Result types: `succeeded`, `errored`, `canceled`, `expired`
 - Cost: 50% of standard API pricing
 
+## Verification Checklist
+- [x] Batch submitted successfully via `client.beta.messages.batches.create()`
+- [x] Batch ID returned and saved to `batch_state.json`
+- [x] `retrieve` command correctly checks status via `batches.retrieve()`
+- [x] `retrieve` correctly reports "not yet complete" while processing
+- [x] Two-command pattern (submit/retrieve) works end-to-end
+
+## Risks (resolved)
+- Batch queue times unpredictable (8+ minutes for 45 requests) — resolved by decoupling submit/retrieve
+- Inline polling timeout at 300s — resolved by redesigning to fire-and-forget pattern
+- Results may expire if not collected within 24h — documented in CLI help
+
 ## Deviations from Plan
 - Redesigned from inline polling to two-command submit/retrieve pattern
 - Batch API queue times unpredictable (45 requests still in_progress after 8+ min)

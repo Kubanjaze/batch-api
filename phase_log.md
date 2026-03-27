@@ -16,3 +16,6 @@
 - Batch submitted (45 compounds): msgbatch_012CWzGS3jUZ1RdP6E9xyCRV
 - Key learning: Batch API queues are async (minutes to hours); decouple submit from retrieve
 - Committed and pushed to Kubanjaze/batch-api
+
+### 2026-03-27 — Documentation update
+- Added missing sections (Verification Checklist, Risks, Logic) to implementation.md
