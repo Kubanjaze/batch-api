@@ -1,6 +1,6 @@
 # Phase 59 — Batch API: Async Compound Classification at 50% Cost
 
-**Version:** 1.1 | **Tier:** Standard | **Date:** 2026-03-26
+**Version:** 1.2 | **Tier:** Standard | **Date:** 2026-03-26
 
 ## Goal
 Demonstrate the Anthropic Batch API to process all 45 compounds asynchronously at 50% cost reduction.
